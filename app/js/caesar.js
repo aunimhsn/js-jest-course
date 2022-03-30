@@ -1,9 +1,9 @@
-function caesar(entry, key = 1) {
+function caesar(str, key = 1) {
     let result = '';
 
-    for(let i = 0 ; i < entry.length ; i++) {
+    for(let i = 0 ; i < str.length ; i++) {
         
-        let currentChar = entry.charCodeAt(i);
+        let currentChar = str.charCodeAt(i);
 
         // Case: lowercase
         if (currentChar >= 97 && currentChar <= 122) {

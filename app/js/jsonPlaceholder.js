@@ -1,28 +1,16 @@
-function getPostById(id) {
-    let post;
+/** --
+import fetch from 'node-fetch';
 
-    fetch('https://jsonplaceholder.typicode.com/posts/1')
-        .then((response) => response.json())
-        .then(data => post = data)
-        .then(() => console.log(post));
-
-    return post;
+async function getPostById(id) {
+    try {
+        let result = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+        let data = await result.json();
+        return data;
+    } catch (e) {
+        console.log(e);
+        return null;
+    }
 }
 
-// 10 users
-function getUsers(id) {
-    let users;
-
-    fetch('https://jsonplaceholder.typicode.com/users')
-        .then((response) => response.json())
-        .then(data => users = data)
-        .then(() => console.log(users));
-
-    return users;
-}
-
-// todo:obj
-function addTodo(todo) {
-    
-}
-
+export { getPostById };
+**/

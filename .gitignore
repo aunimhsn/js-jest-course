@@ -1,3 +1,5 @@
 /app/node_modules/*
 /app/js/challenges.js
 /app/tests/challenges.test.js
+/app/js/jsonPlaceholder.js
+/app/tests/jsonPlaceholder.test.js
