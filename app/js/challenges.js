@@ -3,30 +3,24 @@ function absolute(number) {
     if (number < 0)
         number *= -1
 
-    return number
+    return number;
 }
 
 function isEven(number) {
-    if (number % 2 == 0)
-        return true
-
-    return false
+    return (number % 2 == 0);
 }
 
 function isOdd(number) {
-    if (number % 2 != 0)
-        return true
-
-    return false
+    return (number % 2 != 0);
 }
 
 function removeVowels(text) {
-    let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
-    let result = ""
+    let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    let result = "";
 
     for (let i = 0; i < text.length; i++) {
         if (! vowels.includes(text.charAt(i)))
-            result += text.charAt(i)
+            result += text.charAt(i);
     }
 
     return result;
@@ -43,7 +37,15 @@ function filterInteger(array) {
     return result;
 }
 
-export { absolute, isEven, isOdd, removeVowels, filterInteger };
+function isPrime(n) {
+    for (let i = 2; i < n; i++) {
+        if(n % i === 0) return false;
+    }
+
+    return (n > 1);
+}
+
+export { absolute, isEven, isOdd, removeVowels, filterInteger, isPrime };
 
 
 
